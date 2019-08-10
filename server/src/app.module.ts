@@ -5,7 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { CustomerModule } from './customer/customer.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongoURI', { useNewUriParser: true }), CustomerModule],
+  imports: [MongooseModule.forRoot('mongodb://localhost/customer-list-management', { useNewUriParser: true }), CustomerModule],
   controllers: [AppController],
   providers: [AppService],
 })
